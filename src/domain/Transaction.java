@@ -1,5 +1,8 @@
 package domain;
 
+import database.TransactionDA;
+import java.util.ArrayList;
+
 public class Transaction {
 
     private int transactionID;
@@ -17,18 +20,18 @@ public class Transaction {
         this.transactionAmount = transactionAmount;
     }
      public void add(){
-      CustomerDA.add(this);
+      TransactionDA.add(this);
       
     };
-    public static ArrayList<Customer>getCustomer(){
-       return CustomerDA.getCustomers();
+    public static ArrayList<Transaction>getTransaction(){
+       return TransactionDA.getTransaction();
     }
     public static void initialize(){
-           CustomerDA.initialize();
+           TransactionDA.initialize();
     }
     public String toString(){
         
-    return getCustomerID()+"    "+getFirstName();
+    return getTransactionID()+"    "+getTransactionAmount();
             }
     
 

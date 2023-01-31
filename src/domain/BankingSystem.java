@@ -22,7 +22,9 @@ public class BankingSystem {
             System.out.println(account.get(i));
         }
         Transaction.initialize();
-        ArrayList<Transaction>transaction=Transaction
+        ArrayList<Transaction>transaction=Transaction.getTransaction();
+        for(i=0;i<transaction.size();i++){
+           System.out.println(transaction.get(i));}
     }
 
 }
