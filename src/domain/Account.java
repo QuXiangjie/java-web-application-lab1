@@ -1,6 +1,9 @@
 
 package domain;
 
+import database.AccountDA;
+import java.util.ArrayList;
+
 
 public class Account {
     private int accountNumber;
@@ -13,6 +16,20 @@ public class Account {
         this.accountName = accountName;
         this.dateOpened = dateOpened;
     }
+    public void add(){
+    AccountDA.add(this);
+    }
+    public static ArrayList <Account>getAccounts(){
+    return AccountDA.getAccounts();}
+    public static void initialize(){
+    AccountDA.initialize();
+    }
+    public String toString(){
+        return getCustomerID()+"    "+getAccountNumber()+"    "+getAccountName();
+        
+    }
+    
+    
 
     public int getAccountNumber() {
         return accountNumber;
