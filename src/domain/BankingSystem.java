@@ -21,6 +21,8 @@ public class BankingSystem {
         for (i = 0; i < account.size(); i++) {
             System.out.println(account.get(i));
         }
+        Transaction.initialize();
+        ArrayList<Transaction>transaction=Transaction
     }
 
 }

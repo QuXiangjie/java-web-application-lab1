@@ -16,6 +16,21 @@ public class Transaction {
         this.description = description;
         this.transactionAmount = transactionAmount;
     }
+     public void add(){
+      CustomerDA.add(this);
+      
+    };
+    public static ArrayList<Customer>getCustomer(){
+       return CustomerDA.getCustomers();
+    }
+    public static void initialize(){
+           CustomerDA.initialize();
+    }
+    public String toString(){
+        
+    return getCustomerID()+"    "+getFirstName();
+            }
+    
 
     public int getTransactionID() {
         return transactionID;
