@@ -19,21 +19,25 @@ public class Transaction {
         this.description = description;
         this.transactionAmount = transactionAmount;
     }
-     public void add(){
-      TransactionDA.add(this);
-      
-    };
-    public static ArrayList<Transaction>getTransaction(){
-       return TransactionDA.getTransaction();
+
+    public void add() {
+        TransactionDA.add(this);
+
     }
-    public static void initialize(){
-           TransactionDA.initialize();
+
+    ;
+    public static ArrayList<Transaction> getTransaction() {
+        return TransactionDA.getTransaction();
     }
-    public String toString(){
-        
-    return getTransactionID()+"    "+getTransactionAmount();
-            }
-    
+
+    public static void initialize() {
+        TransactionDA.initialize();
+    }
+
+    public String toString() {
+
+        return getTransactionID() + "    " + getTransactionAmount();
+    }
 
     public int getTransactionID() {
         return transactionID;
@@ -74,6 +78,5 @@ public class Transaction {
     public void setTransactionAmount(int transactionAmount) {
         this.transactionAmount = transactionAmount;
     }
-    
 
 }
