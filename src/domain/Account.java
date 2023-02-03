@@ -5,11 +5,13 @@ import database.AccountDA;
 import java.util.ArrayList;
 
 
-abstract class Account {
+public abstract class Account {
     private int accountNumber;
     private int customerID;   //this is a foreign from customer!!! no solve now
     private String accountName;
     private String dateOpened;
+    
+    public Account(){}
     public Account(int accountNumber, int customerID, String accountName, String dateOpened) {
         this.accountNumber = accountNumber;
         this.customerID = customerID;
@@ -20,7 +22,8 @@ abstract class Account {
     AccountDA.add(this);
     }
     public static ArrayList <Account>getAccounts(){
-    return AccountDA.getAccounts();}
+    return AccountDA.getAccounts();
+    }
     public static void initialize(){
     AccountDA.initialize();
     }

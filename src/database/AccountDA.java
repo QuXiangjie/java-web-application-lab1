@@ -19,6 +19,9 @@ public class AccountDA {
 
     public static void initialize() {
         AssetAccount a1, a2, a3, a4;
+        Account a;
+        a = new AssetAccount();
+        
         a1 = new AssetAccount(10001, customer.get(0).getCustomerID(), "1-1-ac", "1-31-23",1,1);
         a2 = new AssetAccount(10002, customer.get(0).getCustomerID(), "1-2-ac", "1-31-23");
         a3 = new LiabilityAccount(10003, customer.get(1).getCustomerID(), "2-1-ac", "1-31-23");

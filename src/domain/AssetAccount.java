@@ -5,6 +5,8 @@ package domain;
 public class AssetAccount extends Account {
     private double interestRate;
     private double transactionFee;
+    
+    public AssetAccount() {}
 
     public AssetAccount(int accountNumber, int customerID, String accountName, String dateOpened,
                         double interestRate, double transactionFee) {
