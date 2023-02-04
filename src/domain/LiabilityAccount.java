@@ -15,6 +15,7 @@ public class LiabilityAccount extends Account {
     private double monthlyPayment;
     private String paymentDate;
 
+    public LiabilityAccount() {}
     public LiabilityAccount(int accountNumber, int customerID, String accountName, String dateOpened,
                             double interestRate, double monthlyPayment, String paymentDate) {
         super(accountNumber, customerID, accountName, dateOpened);

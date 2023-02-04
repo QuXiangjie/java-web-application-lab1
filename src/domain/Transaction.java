@@ -11,6 +11,9 @@ public class Transaction {
     private String description;
     private int transactionAmount;
 
+    public Transaction() {
+    }
+
     public Transaction(int transactionID, String transactionDate, int accountNumber, String description, int transactionAmount) {
         this.accountNumber = accountNumber;
         this.transactionID = transactionID;
@@ -35,8 +38,7 @@ public class Transaction {
     }
 
     public String toString() {
-
-        return getTransactionID() + "    " + getTransactionAmount();
+        return getTransactionID() + "    "+getTransactionDate() + "    " +getAccountNumber() + "    " +getDescription() + "    "  + getTransactionAmount();
     }
 
     public int getTransactionID() {

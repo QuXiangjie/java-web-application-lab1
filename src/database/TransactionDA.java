@@ -8,7 +8,6 @@ import java.time.format.DateTimeFormatter;
 
 public class TransactionDA {
 
-    private static ArrayList<Account> account = Account.getAccounts();
     private static ArrayList<Transaction> transaction = new ArrayList<Transaction>(20);
 
     public static void add(Transaction t) {
@@ -21,23 +20,19 @@ public class TransactionDA {
 
     public static void initialize() {
         Transaction t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12;    //creat 12 objects for 4 accounts for 2 customer
-        LocalDateTime myDateObj = LocalDateTime.now();
-        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
-        String formattedDate = myDateObj.format(myFormatObj);
 
-        t1 = new Transaction(1, formattedDate, account.get(0).getAccountNumber(), "buying one book", 10);
-        t2 = new Transaction(2, formattedDate, account.get(0).getAccountNumber(), "buying one book", 11);
-        t3 = new Transaction(3, formattedDate, account.get(0).getAccountNumber(), "buying one book", 12);
-        t4 = new Transaction(4, formattedDate, account.get(1).getAccountNumber(), "buying one book", 13);
-        t5 = new Transaction(5, formattedDate, account.get(1).getAccountNumber(), "buying one book", 14);
-        t6 = new Transaction(6, formattedDate, account.get(1).getAccountNumber(), "buying one book", 15);
-        t7 = new Transaction(7, formattedDate, account.get(2).getAccountNumber(), "buying one book", 16);
-        t8 = new Transaction(8, formattedDate, account.get(2).getAccountNumber(), "buying one book", 17);
-        t9 = new Transaction(9, formattedDate, account.get(2).getAccountNumber(), "buying one book", 18);
-        t10 = new Transaction(10, formattedDate, account.get(3).getAccountNumber(), "buying one book", 19);
-        t11 = new Transaction(11, formattedDate, account.get(3).getAccountNumber(), "buying one book", 20);
-        t12 = new Transaction(12, formattedDate, account.get(3).getAccountNumber(), "buying one book", 21);
-
+        t1 = new Transaction(1, "2-4-23", 10001, "1001 assetaccount transaction", 10);
+        t2 = new Transaction(2, "2-3-23", 10001, "1001 assetaccount transaction", 11);
+        t3 = new Transaction(3, "2-2-23", 10001, "1001 assetaccount transaction", 12);
+        t4 = new Transaction(4, "2-1-23", 10002, "1002 assetaccount transaction", 13);
+        t5 = new Transaction(5, "1-31-23", 10002, "1002 assetaccount transaction", 14);
+        t6 = new Transaction(6, "1-31-23", 10002, "1002 assetaccount transaction", 15);
+        t7 = new Transaction(7, "2-3-23", 20001, "2001 liabilityaccount transaction", 16);
+        t8 = new Transaction(8, "2-2-23", 20001, "2001 liabilityaccount transaction", 17);
+        t9 = new Transaction(9, "2-1-23", 20001, "2001 liabilityaccount transaction", 18);
+        t10 = new Transaction(10, "1-31-23", 20002, "2002 liabilityaccount transaction", 19);
+        t11 = new Transaction(11, "1-31-23", 20002, "2002 liabilityaccount transaction", 20);
+        t12 = new Transaction(12, "2-4-23", 20002, "2002 liabilityaccount transaction", 21);
         add(t1);
         add(t2);
         add(t3);
